@@ -1,9 +1,3 @@
-h1, h2 {
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
-}
-
 .header-view {
   position: absolute;
   top: 0;
@@ -18,4 +12,109 @@ h1, h2 {
 
 .header-view .logo img {
   width: auto;
+}
+
+/* HOME VIEW */
+/******************************************/
+.home-view h1 {
+  font-size: 1.9em;
+}
+
+.home-view h2 {
+  font-size: 1.3em;
+}
+
+/* PROJECTS VIEW */
+/******************************************/
+.projects-view {
+}
+
+.projects-view .detail {
+  padding: 36px 20px;
+}
+
+.projects-view .detail .text {
+  padding-top: 20px;
+}
+
+/* NEWS VIEW */
+/******************************************/
+.news-view {
+  padding: 42px 20px 0px 20px;
+  color: #FFF;
+  background-color: #000;
+}
+
+.news-view .item {
+  padding: 0px 0px 60px 0px;
+}
+
+.news-view .type {
+  padding-bottom: 14px;
+  font-family: 'CalibreWeb-Semibold';
+  font-size: 1.5em;
+}
+
+.news-view .image {
+  padding-bottom: 20px;
+}
+
+.news-view .more {
+  display: inline-block;
+  padding-top: 12px; 
+  padding-left: 12px; 
+  font-size: 0.5em;
+  line-height: 1em;
+  vertical-align: top;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .home-view h1 {
+    font-size: 2.1em;
+  }
+
+  .projects-view .detail {
+    padding: 22px 30px 52px 30px;
+  }
+
+  .news-view {
+    color: inherit;
+    background-color: #EAECE9;
+  }
+
+  .news-view .item {
+    padding: 0px 10px 100px 10px;
+  }
+
+  .news-view .type {
+    font-size: 1.3em;
+  }
+}
+
+/* Small devices (tablets, 992px and up) */
+@media (min-width: 992px) {
+  .home-view h1 {
+    font-size: 2.8em;
+  }
+
+  .home-view h2 {
+    font-size: 1.6em;
+  }
+
+  .projects-view .detail {
+    padding: 26px 42px 72px 42px;
+  }
+
+  .news-view .item {
+    padding: 0px 22px 128px 22px;
+  }
+
+  .news-view .type {
+    font-size: 1.7em;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
 }

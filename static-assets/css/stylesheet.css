@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'CalibreWeb-Medium';
+    src: url('CalibreWeb-Medium.woff2') format('woff2'),
+         url('CalibreWeb-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'CalibreWeb-Semibold';
+    src: url('CalibreWeb-Semibold.woff2') format('woff2'),
+         url('CalibreWeb-Semibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
