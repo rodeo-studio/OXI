@@ -17,6 +17,12 @@ define([
 
   var initialize = function() {
     var self = this;
+    
+    $('.top').click(function(evt){
+      $('html, body').animate({
+        scrollTop: $("#top").offset().top
+      }, 1000);
+    });
   };
 
   return { 

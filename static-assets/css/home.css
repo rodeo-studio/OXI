@@ -45,6 +45,11 @@
   background-color: #000;
 }
 
+.news-view .blank {
+  display: none;
+  min-height: 100px;
+}
+
 .news-view .item {
   padding: 0px 0px 60px 0px;
 }
@@ -61,8 +66,8 @@
 
 .news-view .more {
   display: inline-block;
-  padding-top: 12px; 
-  padding-left: 12px; 
+  padding-top: 8px; 
+  padding-left: 8px; 
   font-size: 0.5em;
   line-height: 1em;
   vertical-align: top;
@@ -79,8 +84,13 @@
   }
 
   .news-view {
+    padding-top: 52px;
     color: inherit;
     background-color: #EAECE9;
+  }
+
+  .news-view .blank {
+    display: block;
   }
 
   .news-view .item {
@@ -89,6 +99,10 @@
 
   .news-view .type {
     font-size: 1.3em;
+  }
+
+  .news-view .more {
+    padding-top: 12px;
   }
 }
 
@@ -104,6 +118,10 @@
 
   .projects-view .detail {
     padding: 26px 42px 72px 42px;
+  }
+
+  .news-view {
+    padding-top: 72px;
   }
 
   .news-view .item {

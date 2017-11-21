@@ -42,12 +42,14 @@ var APP = 'DefApp';
           <h1>Commonwealth  & Kings Park achieves ample architecture accolades<div class="more"><i class="fa fa-caret-right"></i></div></h1>
         </div>
       </div>
+
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding">
         <div class="item">
           <div class="type">News</div>
           <h1>1st Prize Canberra Central Parklands International Design Competition<div class="more"><i class="fa fa-caret-right"></i></div></h1>
         </div>
       </div>
+
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding">
         <div class="item">
           <div class="type">News</div>
@@ -55,6 +57,7 @@ var APP = 'DefApp';
           <h2>St Peters Town Hall Complex - 2013 AIA SA Heritage Architecture Award. Read more</h2>
         </div>
       </div>
+
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding">
         <div class="item">
           <div class="type">Event</div>
@@ -63,6 +66,81 @@ var APP = 'DefApp';
         </div>
       </div>
 
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 nopadding blank"></div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding">
+          <div class="item">
+            <div class="type">Event</div>
+            <h1>2017 SA Landscape Architecture Award Winners</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding">
+        <div class="item">
+          <div class="type">News</div>
+          <h1>Adelaide  Park Lands - Landscape  Master Plan</h1>
+        </div>
+      </div>
+
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding blank"></div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding">
+          <div class="item">
+            <div class="type">News</div>
+            <h1>Tuggeranong Town Park final master plan released</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding">
+        <div class="item">
+          <div class="type">Instagram</div>
+          <div class="image"><img src="static-assets/images/temp_news2.jpg"></div>
+          <h2>Hackney Road Pedestrian + Cycle Bridge Open…<div class="more"><i class="fa fa-caret-right"></i></div></h2>
+        </div>
+      </div>
+
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding blank"></div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding">
+          <div class="item">
+            <div class="type">News</div>
+            <div class="image"><img src="static-assets/images/temp_news3.jpg"></div>
+            <h2>St Peters Town Hall Complex - 2013 AIA SA Heritage Architecture Award. Read more</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-view">
+      <div class="address">
+      <div class="title"><img src="static-assets/images/logo.png"></div>
+      <p>
+      Adelaide Studio<br/>
+      98–100 Halifax Steet<br/>
+      Adelaide 5000 SA
+      </p>
+      <p>
+      Canberra Studio<br/>
+      Kingston Foreshores  Eastlake Parade <br/>
+      Kingston ACT 2604
+      </p>
+      </div>
+      <div class="contact">
+      <h1 class="title">Contact</h1>
+      <p>
+      T+61 8 7324 9600<br/>
+      <a href="mailto:design@oxigen.net.au">design@oxigen.net.au</a>
+      <br/><br/>
+      Instagram
+      </p>
+      </div>
+      <div class="subscribe">
+      <h1>Subscribe</h1>
+      </div>
+
+      <div class="top"><p>Up</p></div>
     </div>
 
     <div class="header-view">
