@@ -48,8 +48,13 @@ img.scale {
 /* FOOTER VIEW */
 /******************************************/
 .footer-view {
+  position: relative;
   padding: 44px 50px 56px 50px;
   font-family: 'CalibreWeb-Semibold';
+}
+
+.footer-view .footer-container .logo {
+  padding-top: 6px;
 }
 
 .footer-view a,
@@ -64,9 +69,7 @@ img.scale {
   text-decoration: underline;
 }
 
-.footer-view .address,
-.footer-view .contact,
-.footer-view .subscribe {
+.footer-view .section .detail {
   padding-bottom: 52px;
 }
 
@@ -93,17 +96,54 @@ img.scale {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .footer-view {
+    padding: 44px 56px 56px 30px;
+  }
+
   .footer-view .top {
     text-align: inherit;
   }
 
-  .footer-view img {
-    width: auto;
+  .footer-view p {
+    font-size: 1.3em;
+  }
+
+  .footer-view .footer-container {
+    position: relative;
+  }
+
+  .footer-view .section .detail {
+    padding: 0px 0px 0px 44px;
+  }
+  .footer-view .section:first-child .detail {
+    padding-left: 0;
+  }
+
+  .footer-view .section:last-child .detail {
+    text-align: right;
+    padding-right: 0;
+  }
+
+  .footer-view .top {
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 }
 
 /* Small devices (tablets, 992px and up) */
 @media (min-width: 992px) {
+  .footer-view {
+    padding: 44px 86px 56px 44px;
+  }
+
+  .footer-view img {
+    width: auto;
+  }
+
+  .footer-view p {
+    font-size: 1.75em;
+  }
 }
 
 /* Large devices (large desktops, 1200px and up) */
