@@ -154,7 +154,13 @@ var APP = 'DefApp';
     </div>
 
     <div class="header-view">
-      <div class="logo"><img src="static-assets/images/logo.png"></div>
+      <div class="logo"><a href="home"><img src="static-assets/images/logo.png"></a></div>
+      <div class="menus">
+      <ul>
+        <li><a href="projects">Projects</a></li>
+        <li><a href="practice">Practice</a></li>
+      </ul>
+      </div>
     </div>
   </div>
 </div>
