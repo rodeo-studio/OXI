@@ -1,0 +1,84 @@
+/* PROJECTS VIEW */
+/******************************************/
+.projects-view h1 {
+  font-size: 1.9em;
+}
+
+.projects-view h2 {
+  font-size: 1.3em;
+}
+
+/* PROJECTS FILTER VIEW */
+/******************************************/
+.projects-filter-view {
+}
+
+.projects-filter-view .detail {
+  padding: 36px 20px;
+}
+
+.projects-filter-view .detail .text {
+  padding-top: 20px;
+}
+
+.projects-filter-view .filter-marker {
+  padding: 18px 0 12px 20px;
+  font-family: 'CalibreWeb-Semibold';
+  font-size: 1.5em;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {  
+  .projects-view h1 {
+    font-size: 2.1em;
+  }
+
+  .projects-filter-view {
+    padding: 0 30px 50px 30px;
+  }
+
+  .projects-filter-view .projects-filter-project-view {
+    padding-bottom: 28px;
+  }
+
+  .projects-filter-view .detail {
+    padding: 0 12px 0 12px;
+  }
+
+  .projects-filter-view .filter-marker {
+    padding-left: 0;
+    padding-bottom: 22px;
+    font-size: 1.3em;
+  }
+}
+
+/* Small devices (tablets, 992px and up) */
+@media (min-width: 992px) {
+  .projects-view h1 {
+    font-size: 2.8em;
+  }
+
+  .projects-view h2 {
+    font-size: 1.6em;
+  }
+
+  .projects-filter-view {
+    padding: 0 44px 82px 44px;
+  }
+
+  .projects-filter-view .projects-filter-project-view {
+    padding-bottom: 40px;
+  }
+
+  .projects-filter-view .detail {
+    padding: 0 18px 0 18px;
+  }
+
+  .projects-filter-view .filter-marker {
+    font-size: 1.7em;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
