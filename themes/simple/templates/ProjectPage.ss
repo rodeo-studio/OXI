@@ -16,6 +16,12 @@ var APP = 'DefApp';
     <% include DisplayHeader %>
 
     <div class="project-detail-view clearfix">
+      <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">$Content</div>
+      </div>
+    </div>
+
+    <div class="project-detail-photos-view clearfix">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
         <div class="image-element-container">
           <div class="image-element" style="background-image: url('static-assets/images/temp_project0.jpg')">
@@ -56,6 +62,32 @@ var APP = 'DefApp';
           <div class="image-element" style="background-image: url('static-assets/images/temp_project5.jpg')">
           <img src="static-assets/images/temp_project5.jpg">
           </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 nopadding">
+        <div class="image-element-container">
+          <div class="image-element" style="background-image: url('static-assets/images/temp_project6.jpg')">
+          <img src="static-assets/images/temp_project6.jpg">
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 nopadding">
+        <div class="image-element-container">
+          <div class="image-element" style="background-image: url('static-assets/images/temp_project7.jpg')">
+          <img src="static-assets/images/temp_project7.jpg">
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
+        <div class="image-element-container">
+          <div class="image-element" style="background-image: url('static-assets/images/temp_project8.jpg')">
+          <img src="static-assets/images/temp_project8.jpg">
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
+        <div class="photos-footer">
+        <span class="back-link"><i class="fa fa-caret-left"></i> Back</span>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-<div class="header-view">
+<div class="header-view clearfix">
   <div class="logo"><a href="{$BaseHref}home"><img src="static-assets/images/logo.png"></a></div>
   <div class="menus">
   <ul>

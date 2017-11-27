@@ -23,6 +23,10 @@ define([
         scrollTop: $("#top").offset().top
       }, 1000);
     });
+
+    $('.back-link').click(function(evt){
+      window.history.back();
+    });
   };
 
   return { 

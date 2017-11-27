@@ -16,7 +16,7 @@ var APP = 'DefApp';
 
     <div class="projects-view clearfix">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
-        <img src="static-assets/images/temp_home0.jpg">
+        <a href="{$BaseHref}projects/project-2"><img src="static-assets/images/temp_home0.jpg"></a>
         <div class="detail">
         <h1>84 Halifax<br/>
         Street
@@ -24,7 +24,7 @@ var APP = 'DefApp';
         </div>
       </div>
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
-      <img src="static-assets/images/temp_home1.jpg">
+        <a href="{$BaseHref}projects/project-2"><img src="static-assets/images/temp_home1.jpg"></a>
         <div class="detail">
         <h1>Flinders University<br/>
          Hub and Plaza</h1>
