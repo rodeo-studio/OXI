@@ -4,7 +4,9 @@ class PracticePersonElement extends DataObject {
     'Name' => 'Varchar',
     'Title' => 'Varchar',
     'SortID'=>'Int',
-    'ProfileInfo' => 'HTMLText'
+    'ProfileInfo' => 'HTMLText',
+    'Email' => 'Varchar',
+    'Projects' => 'HTMLText'
   );
 
   private static $has_one = array(
@@ -33,7 +35,9 @@ class PracticePersonElement extends DataObject {
       new TextField('Name', 'Name'), 
       new TextField('Title', 'Title'), 
       $uploadField,
-      new HtmlEditorField('ProfileInfo', 'Profile'));
+      new HtmlEditorField('ProfileInfo', 'Profile'),
+      new TextField('Email', 'Email'),
+      new HtmlEditorField('Projects', 'Projects'));
 
     return $fields; 
   }

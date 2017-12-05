@@ -10,6 +10,5 @@ $MetaTags(false)
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
 <link href='static-assets/css/stylesheet.css' rel='stylesheet' />
 <link href='static-assets/css/web_platform.css' rel='stylesheet' />

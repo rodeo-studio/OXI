@@ -44,15 +44,26 @@ define([
 
       nActiveProfileID = elElement.attr('data-id');
 
+      var strImageURL = $('.image', elElement).html();
       var strContent = $('.content', elElement).html();
+      var strEmail = $('.email', elElement).html();
+      var strProjectsSummary = $('.projects-summary', elElement).html();
 
       // show shared info (next sibling)
       var elSharedInfoMini = $(elElement).nextAll('.shared-info-mini').eq(0);
+      $('.image img', elSharedInfoMini).attr('src', strImageURL);
       $('.content', elSharedInfoMini).html(strContent);
+      $('.email a', elSharedInfoMini).attr('href', 'mailto:' + strEmail);
+      $('.email a', elSharedInfoMini).html(strEmail);
+      $('.projects-summary', elSharedInfoMini).html(strProjectsSummary);
       elSharedInfoMini.fadeIn();
 
       var elSharedInfoMaxi = $(elElement).nextAll('.shared-info-maxi').eq(0);
+      $('.image img', elSharedInfoMaxi).attr('src', strImageURL);
       $('.content', elSharedInfoMaxi).html(strContent);
+      $('.email a', elSharedInfoMaxi).attr('href', 'mailto:' + strEmail);
+      $('.email a', elSharedInfoMaxi).html(strEmail);
+      $('.projects-summary', elSharedInfoMaxi).html(strProjectsSummary);
       elSharedInfoMaxi.fadeIn();
     });
   };
