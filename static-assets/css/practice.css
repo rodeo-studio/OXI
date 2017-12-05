@@ -58,6 +58,10 @@
   font-size: 2.2em;
 }
 
+.practice-people-view .person-info-container {
+  display: none;
+}
+
 .practice-people-view .person-info-container.row {
   margin-left: -10px;
   margin-right: -10px;

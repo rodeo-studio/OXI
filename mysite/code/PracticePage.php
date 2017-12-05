@@ -5,6 +5,7 @@ class PracticePage extends Page {
   );
 
   private static $has_many = array(
+    'PracticePersonElements' => 'PracticePersonElement'
   );
 
   private static $has_one = array(
@@ -12,6 +13,19 @@ class PracticePage extends Page {
 
   function getCMSFields() {
     $fields = parent::getCMSFields();
+
+    // People
+    $configPeople = GridFieldConfig_RelationEditor::create();
+    $configPeople->removeComponentsByType('GridFieldPaginator');
+    $configPeople->removeComponentsByType('GridFieldPageCount');
+    $configPeople->addComponent(new GridFieldSortableRows('SortID'));
+    $practicePersonElementField = new GridField(
+      'PracticePersonElements', // Field name
+      'Person Element', // Field title
+      $this->PracticePersonElements(),
+      $configPeople
+    );
+    $fields->addFieldToTab('Root.People', $practicePersonElementField); 
 
     return $fields;
   }
@@ -23,5 +37,36 @@ class PracticePage_Controller extends Page_Controller {
 
   public function init() {
     parent::init();
+
+    function PracticePersonElements($ProfileElements) {
+      $ProfileElementsEdited = new ArrayList();
+
+      $nColsMini = 2;
+      $nColsMaxi = 3;
+      $nColMini = 0;
+      $nColMaxi = 0;
+      foreach($ProfileElements as $item) {
+        $ProfileElementsEdited->push($item);
+
+        if ($nColMini == $nColsMini-1) {
+          $nColMini = 0;
+          $item->MiniBreak = true;
+        }
+        else {
+          $nColMini++;
+        }
+
+        if ($nColMaxi == $nColsMaxi-1) {
+          $nColMaxi = 0;
+          $item->Break = true;
+        }
+        else {
+          $nColMaxi++;
+        }
+      }
+      return $ProfileElementsEdited;
+    }
+
+    $this->PracticePersonElementsEdited = PracticePersonElements($this->PracticePersonElements());
   }
 }
