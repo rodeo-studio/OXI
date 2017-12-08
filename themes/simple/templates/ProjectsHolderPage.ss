@@ -31,9 +31,8 @@ var APP = 'DefApp';
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
         <div class="projects-filter-project-view clearfix">
           <div class="filter-marker">2017</div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding">
-          <a href="{$BaseHref}projects/project-2"><img src="static-assets/images/temp_home0.jpg"></a>
-          </div>
+          <a href="{$BaseHref}projects/project-2">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding"><img src="static-assets/images/temp_home0.jpg"></div>
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding">
             <div class="detail">
             <h1>84 Halifax<br/>
@@ -41,14 +40,14 @@ var APP = 'DefApp';
             </h1>
             </div>
           </div>
+          </a>
         </div>
       </div>
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
         <div class="projects-filter-project-view clearfix">
           <div class="filter-marker">2016</div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding">
-          <a href="{$BaseHref}projects/project-2"><img src="static-assets/images/temp_home1.jpg"></a>
-          </div>
+          <a href="{$BaseHref}projects/project-2">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding"><img src="static-assets/images/temp_home1.jpg"></div>
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding">
             <div class="detail">
             <h1>Flinders University<br/>
@@ -58,6 +57,7 @@ var APP = 'DefApp';
             </h2>
             </div>
           </div>
+          </a>
         </div>
       </div>
     </div>

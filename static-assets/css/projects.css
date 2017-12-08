@@ -13,6 +13,18 @@
 .projects-filter-view {
 }
 
+.projects-filter-view a,
+.projects-filter-view a:visited,
+.projects-filter-view a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.projects-filter-view a:hover {
+  color: #DD0330;
+  text-decoration: none;
+}
+
 .projects-filter-view .detail {
   padding: 36px 20px;
 }

@@ -87,8 +87,8 @@ img.scale {
 }
 
 .header-view a:hover {
-  color: inherit;
-  text-decoration: underline;
+  color: #DD0330;
+  text-decoration: none;
 }
 
 /* FOOTER VIEW */
