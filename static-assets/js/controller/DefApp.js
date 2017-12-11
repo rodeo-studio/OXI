@@ -5,8 +5,9 @@ define([
   'backbone',
   'bootstrap',
   'modernizr',
-  'imageScale'
-], function(_, Backbone, bootstrap, modernizr, imageScale){
+  'imageScale',
+  'views/ProjectFilterResultsView'
+], function(_, Backbone, bootstrap, modernizr, imageScale, ProjectFilterResultsView){
   app.dispatcher = _.clone(Backbone.Events);
 
   _.templateSettings = {
@@ -18,7 +19,10 @@ define([
   var initialize = function() {
     var self = this;
     
+    app.dispatcher.on("ProjectFilterResultsView:loaded", onProjectFilterResultsLoaded);
+
     var nActiveProfileID = 0;
+    var projectFilterResultsView = null;
 
     $('.top').click(function(evt){
       $('html, body').animate({
@@ -66,6 +70,15 @@ define([
       $('.projects-summary', elSharedInfoMaxi).html(strProjectsSummary);
       elSharedInfoMaxi.fadeIn();
     });
+
+    if ($('#projects-filter-results-view')) {
+      projectFilterResultsView = new ProjectFilterResultsView({ el: '#projects-filter-results-view' });
+      projectFilterResultsView.load();
+    }
+
+    function onProjectFilterResultsLoaded() {
+      projectFilterResultsView.render();
+    }
   };
 
   return { 

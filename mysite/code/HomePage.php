@@ -2,6 +2,7 @@
 class HomePage extends Page {
 
   private static $db = array(
+    'SocialInstagram' => 'Text'
   );
 
   private static $has_many = array(
@@ -12,6 +13,11 @@ class HomePage extends Page {
 
   function getCMSFields() {
     $fields = parent::getCMSFields();
+
+    $fields->addFieldToTab('Root.Social', new TextField('SocialInstagram', 'Instagram User'));
+
+    // remove fields
+    $fields->removeFieldFromTab('Root.Main', 'Content');
 
     return $fields;
   }

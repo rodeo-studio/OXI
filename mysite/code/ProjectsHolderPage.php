@@ -38,3 +38,24 @@ class ProjectsHolderPage_Controller extends Page_Controller {
     );
   }
 }
+
+class ProjectsFilterPage_Controller extends Page_Controller {
+  private static $allowed_actions = array (
+  );
+
+  public function init() {
+    parent::init();
+
+    $this->Projects = DataObject::get( 
+    $callerClass = "ProjectPage", 
+    $filter = "", 
+    $sort = "",
+    $join = "",
+    $limit = "" 
+    );
+  }
+
+  public function index($request) {
+    return $this->renderWith('AjaxProjectsHolderPage');
+  }
+}
