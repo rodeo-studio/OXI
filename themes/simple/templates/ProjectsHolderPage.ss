@@ -28,38 +28,34 @@ var APP = 'DefApp';
     </div>
 
     <div class="projects-filter-view clearfix">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
-        <div class="projects-filter-project-view clearfix">
-          <div class="filter-marker">2017</div>
-          <a href="{$BaseHref}projects/project-2">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding"><img src="static-assets/images/temp_home0.jpg"></div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding">
-            <div class="detail">
-            <h1>84 Halifax<br/>
-            Street
-            </h1>
+      <% loop Projects %>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
+          <div class="projects-filter-project-view clearfix">
+            <div class="filter-marker">2017</div>
+            <a href="{$BaseHref}projects/project-2">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding">
+            <% loop ProjectPhotoElements %>
+              <% if Pos = 1 %><img src="{$HeroImage.URL}"><% end_if %>
+            <% end_loop %>
             </div>
-          </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
-        <div class="projects-filter-project-view clearfix">
-          <div class="filter-marker">2016</div>
-          <a href="{$BaseHref}projects/project-2">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding"><img src="static-assets/images/temp_home1.jpg"></div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding">
-            <div class="detail">
-            <h1>Flinders University<br/>
-             Hub and Plaza</h1>
-            <h2 class="text">
-            Velecae volor aut que qui ad eum fugiatem ut quisci od ulliassum liquatum exceprem ratur aut que qui.
-            </h2>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding">
+              <div class="detail">
+              <h1>
+              <% if LabelFormatted %>
+                $LabelFormatted
+              <% else %>  
+                $MenuTitle
+              <% end_if %>
+              </h1>
+              <% if Synopsis %>
+                <h2 class="text">$Synopsis</h2>
+              <% end_if %>
+              </div>
             </div>
+            </a>
           </div>
-          </a>
         </div>
-      </div>
+      <% end_loop %>
     </div>
 
     <% include DisplayFooter %>

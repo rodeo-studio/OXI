@@ -14,6 +14,9 @@ class ProjectsHolderPage extends Page {
   function getCMSFields() {
     $fields = parent::getCMSFields();
 
+    // remove fields
+    $fields->removeFieldFromTab('Root.Main', 'Content');
+
     return $fields;
   }
 
@@ -25,5 +28,13 @@ class ProjectsHolderPage_Controller extends Page_Controller {
 
   public function init() {
     parent::init();
+
+    $this->Projects = DataObject::get( 
+    $callerClass = "ProjectPage", 
+    $filter = "", 
+    $sort = "",
+    $join = "",
+    $limit = "" 
+    );
   }
 }

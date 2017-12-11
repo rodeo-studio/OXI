@@ -3,7 +3,7 @@
 <head>
 <% base_tag %>
 <% include GetIncludes %>
-<link href='static-assets/css/project.css' rel='stylesheet' />
+<link href='static-assets/css/news.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -11,26 +11,21 @@
 var APP = 'DefApp';
 </script>
 
-<div id="top" class="project-view">
+<div id="top" class="newsitem-view">
   <div class="container-fluid nopadding">
     <% include DisplayHeader %>
 
-    <div class="project-detail-view clearfix">
+    <div class="newsitem-detail-view clearfix">
       <div class="container">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
-        <h1>
-        <% if LabelFormatted %>
-          $LabelFormatted
-        <% else %>  
-          $MenuTitle
-        <% end_if %>
-        </h1>
-        $Content</div>
+        <h1>$MenuTitle</h1>
+        $Content
+        </div>
       </div>
     </div>
 
-    <div class="project-detail-photos-view clearfix">
-      <% loop ProjectPhotoElements %>
+    <div class="newsitem-detail-photos-view clearfix">
+      <% loop NewsPhotoElements %>
         <% if Size = 0 %>
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 nopadding"><% include DisplayPhotoElement %></div>
         <% else_if Size = 1 %>
@@ -39,7 +34,6 @@ var APP = 'DefApp';
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding"><% include DisplayPhotoElement %></div>
         <% end_if %>
       <% end_loop %>
-
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
         <div class="photos-footer">
         <span class="back-link"><i class="fa fa-caret-left"></i> Back</span>
@@ -47,7 +41,6 @@ var APP = 'DefApp';
       </div>
     </div>
 
-    <% include DisplayNews %>
     <% include DisplayFooter %>
   </div>
 </div>

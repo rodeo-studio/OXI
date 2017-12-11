@@ -1,5 +1,6 @@
 <?php
-class HomePage extends Page {
+class NewsHolderPage extends Page {
+  static $allowed_children = array("NewsPage");
 
   private static $db = array(
   );
@@ -13,23 +14,19 @@ class HomePage extends Page {
   function getCMSFields() {
     $fields = parent::getCMSFields();
 
+    // remove fields
+    $fields->removeFieldFromTab('Root.Main', 'Content');
+
     return $fields;
   }
 
 }
-class HomePage_Controller extends Page_Controller {
+
+class NewsHolderPage_Controller extends Page_Controller {
   private static $allowed_actions = array (
   );
 
   public function init() {
     parent::init();
-
-    $this->Projects = DataObject::get( 
-    $callerClass = "ProjectPage", 
-    $filter = "Feature = 1", 
-    $sort = "",
-    $join = "",
-    $limit = "" 
-    );
   }
 }

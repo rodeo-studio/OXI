@@ -187,6 +187,18 @@ img.scale {
   padding: 0px 0px 60px 0px;
 }
 
+.news-view .item a,
+.news-view .item a:visited,
+.news-view .item a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.news-view .item a:hover {
+  color: #DD0330;
+  text-decoration: none;
+}
+
 .news-view .type {
   padding-bottom: 14px;
   font-family: 'CalibreWeb-Semibold';

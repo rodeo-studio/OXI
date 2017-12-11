@@ -13,26 +13,28 @@ var APP = 'DefApp';
 
 <div id="top" class="home-view">
   <div class="container-fluid nopadding">
-
     <div class="projects-view clearfix">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
-        <a href="{$BaseHref}projects/project-2"><img src="static-assets/images/temp_home0.jpg"></a>
-        <div class="detail">
-        <h1>84 Halifax<br/>
-        Street
-        </h1>
+      <% loop Projects %>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
+          <a href="{$BaseHref}projects/{$URLSegment}">
+          <% loop ProjectPhotoElements %>
+            <% if Pos = 1 %><img src="{$HeroImage.URL}"><% end_if %>
+          <% end_loop %>
+          <div class="detail">
+          <h1>
+          <% if LabelFormatted %>
+            $LabelFormatted
+          <% else %>  
+            $MenuTitle
+          <% end_if %>
+          </h1>
+          <% if Synopsis %>
+            <h2 class="text">$Synopsis</h2>
+          <% end_if %>
+          </div>
+          </a>
         </div>
-      </div>
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
-        <a href="{$BaseHref}projects/project-2"><img src="static-assets/images/temp_home1.jpg"></a>
-        <div class="detail">
-        <h1>Flinders University<br/>
-         Hub and Plaza</h1>
-        <h2 class="text">
-        Velecae volor aut que qui ad eum fugiatem ut quisci od ulliassum liquatum exceprem ratur aut que qui.
-        </h2>
-        </div>
-      </div>
+      <% end_loop %>
     </div>
 
     <% include DisplayNews %>

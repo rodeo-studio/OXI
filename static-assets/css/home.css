@@ -22,6 +22,18 @@
 .projects-view {
 }
 
+.projects-view a,
+.projects-view a:visited,
+.projects-view a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.projects-view a:hover {
+  color: #DD0330;
+  text-decoration: none;
+}
+
 .projects-view .detail {
   padding: 36px 20px;
 }
