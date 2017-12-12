@@ -46,13 +46,47 @@ class ProjectsFilterPage_Controller extends Page_Controller {
   public function init() {
     parent::init();
 
-    $this->Projects = DataObject::get( 
+    $ProjectFilter = '';
+
+    if ($this->getRequest()->param('ProjectFilter')) {
+      switch ($this->getRequest()->param('ProjectFilter')) {
+        case 'smallbuilds':
+          $ProjectFilter = 'TagSmallBuilds = 1';
+          break;
+
+        case 'landscape':
+          $ProjectFilter = 'TagLandscape = 1';
+          break;
+
+        case 'infrastructure':
+          $ProjectFilter = 'TagInfrastructure = 1';
+          break;
+
+        case 'publicspace':
+          $ProjectFilter = 'TagPublicSpace = 1';
+          break;
+      }
+    }
+
+    $Projects = DataObject::get( 
     $callerClass = "ProjectPage", 
-    $filter = "", 
-    $sort = "",
+    $filter = $ProjectFilter, 
+    $sort = "ProjectDate DESC",
     $join = "",
     $limit = "" 
     );
+
+    $EditedProjects = new ArrayList();
+    $strCurrYear = '';
+    foreach($Projects as $item) {
+      $strYear = substr($item->ProjectDate, 0, 4);
+      if ($strYear != $strCurrYear) {
+        $strCurrYear = $strYear;
+        $item->GroupYear = $strCurrYear;
+      }
+      $EditedProjects->push($item);
+    }
+    $this->Projects = $EditedProjects;
   }
 
   public function index($request) {

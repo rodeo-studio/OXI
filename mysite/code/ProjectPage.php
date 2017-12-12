@@ -2,9 +2,14 @@
 class ProjectPage extends Page {
 
   private static $db = array(
+    'ProjectDate' => 'Date',  
     'Feature' => 'Boolean',
     'LabelFormatted' => 'Text',
-    'Synopsis' => 'Text'
+    'Synopsis' => 'Text',
+    'TagSmallBuilds' => 'Boolean',
+    'TagLandscape' => 'Boolean',
+    'TagInfrastructure' => 'Boolean',
+    'TagPublicSpace' => 'Boolean'
   );
 
   private static $has_many = array(
@@ -17,7 +22,18 @@ class ProjectPage extends Page {
   function getCMSFields() {
     $fields = parent::getCMSFields();
 
-    $fields->addFieldToTab('Root.Main', new CheckboxField('Feature','Feature on home page'), 'Content'); 
+    $fields->addFieldToTab('Root.Main', new CheckboxField('Feature', 'Feature on home page'), 'Content'); 
+
+    $dateField = new DateField('ProjectDate', 'Date');
+    $dateField->setConfig('showcalendar', true);
+
+    $fields->addFieldToTab('Root.Main', $dateField, 'Content');
+
+    $fields->addFieldToTab("Root.Main", new LiteralField ('literalfield', '<strong>Tags</strong>'), 'Content');
+    $fields->addFieldToTab("Root.Main", new CheckboxField ('TagSmallBuilds', 'Small Builds'), 'Content');
+    $fields->addFieldToTab("Root.Main", new CheckboxField ('TagLandscape', 'Landscape'), 'Content');
+    $fields->addFieldToTab("Root.Main", new CheckboxField ('TagInfrastructure', 'Infrastructure'), 'Content');
+    $fields->addFieldToTab("Root.Main", new CheckboxField ('TagPublicSpace', 'Public Space'), 'Content');
     
     $fields->addFieldToTab('Root.Main', new TextareaField('LabelFormatted','Label (formatted)'), 'Content'); 
     $fields->addFieldToTab('Root.Main', new TextField('Synopsis', 'Synopsis'), 'Content');

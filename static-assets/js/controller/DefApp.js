@@ -73,7 +73,16 @@ define([
 
     if ($('#projects-filter-results-view')) {
       projectFilterResultsView = new ProjectFilterResultsView({ el: '#projects-filter-results-view' });
-      projectFilterResultsView.load();
+
+      $('.filters-container li').click(function(evt) {
+        $('.filters-container li').removeClass('active');
+
+        $(this).addClass('active');
+        projectFilterResultsView.load($(this).attr('data-id'));
+      });
+
+      var elActiveFilter = $('.filters-container .active');
+      projectFilterResultsView.load(elActiveFilter.attr('data-id'));
     }
 
     function onProjectFilterResultsLoaded() {

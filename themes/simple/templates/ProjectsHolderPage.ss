@@ -20,7 +20,7 @@ var APP = 'DefApp';
         <div class="filters-container">
           <div class="title">Filter -</div>
           <ul>
-            <li class="active">Year</li><li>Small Builds</li><li>Landscape</li><li>Infrastructure</li><li>Public Space</li>
+            <li class="active" data-id="all">Year</li><li data-id="smallbuilds">Small Builds</li><li data-id="landscape">Landscape</li><li data-id="infrastructure">Infrastructure</li><li>Public Space</li>
           </ul>
           </div>
         </div>

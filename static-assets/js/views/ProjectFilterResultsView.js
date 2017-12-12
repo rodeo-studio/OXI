@@ -8,10 +8,10 @@ define([
       this.options = options;
     },
 
-    load: function(){
+    load: function(strFilter){
       var self = this;
 
-      var strURL = 'projects/filter/all';
+      var strURL = 'projects/filter/' + strFilter;
       $.ajax({
         url: strURL,
         success: function(response) {

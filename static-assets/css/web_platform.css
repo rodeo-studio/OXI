@@ -162,12 +162,14 @@ img.scale {
 }
 
 .filters-view li:hover {
-  text-decoration: underline;
+  color: #DD0330;
+  text-decoration: none;
   cursor: pointer;
 }
 
 .filters-view li.active {
-  text-decoration: underline;
+  color: #DD0330;
+  text-decoration: none;
 }
 
 /* NEWS VIEW */
