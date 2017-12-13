@@ -22,11 +22,11 @@ class ProjectPage extends Page {
   function getCMSFields() {
     $fields = parent::getCMSFields();
 
+    $fields->addFieldToTab('Root.Main', new TextareaField('LabelFormatted','Label (formatted)'), 'Content'); 
     $fields->addFieldToTab('Root.Main', new CheckboxField('Feature', 'Feature on home page'), 'Content'); 
 
     $dateField = new DateField('ProjectDate', 'Date');
     $dateField->setConfig('showcalendar', true);
-
     $fields->addFieldToTab('Root.Main', $dateField, 'Content');
 
     $fields->addFieldToTab("Root.Main", new LiteralField ('literalfield', '<strong>Tags</strong>'), 'Content');
@@ -35,7 +35,6 @@ class ProjectPage extends Page {
     $fields->addFieldToTab("Root.Main", new CheckboxField ('TagInfrastructure', 'Infrastructure'), 'Content');
     $fields->addFieldToTab("Root.Main", new CheckboxField ('TagPublicSpace', 'Public Space'), 'Content');
     
-    $fields->addFieldToTab('Root.Main', new TextareaField('LabelFormatted','Label (formatted)'), 'Content'); 
     $fields->addFieldToTab('Root.Main', new TextField('Synopsis', 'Synopsis'), 'Content');
 
     $config = GridFieldConfig_RelationEditor::create();

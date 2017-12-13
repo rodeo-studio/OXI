@@ -24,7 +24,7 @@
         T+61 8 7324 9600<br/>
         <a href="mailto:design@oxigen.net.au">design@oxigen.net.au</a>
         <br/><br/>
-        Instagram
+        <a href="{$Home.SocialInstagram}" target="_blank">Instagram</a>
         </p>
         </div>
       </div>

@@ -6,8 +6,9 @@ define([
   'bootstrap',
   'modernizr',
   'imageScale',
-  'views/ProjectFilterResultsView'
-], function(_, Backbone, bootstrap, modernizr, imageScale, ProjectFilterResultsView){
+  'views/ProjectFilterResultsView',
+  'views/InstagramView'
+], function(_, Backbone, bootstrap, modernizr, imageScale, ProjectFilterResultsView, InstagramView){
   app.dispatcher = _.clone(Backbone.Events);
 
   _.templateSettings = {
@@ -22,6 +23,7 @@ define([
     app.dispatcher.on("ProjectFilterResultsView:loaded", onProjectFilterResultsLoaded);
 
     var nActiveProfileID = 0;
+    var instagramView = null;
     var projectFilterResultsView = null;
 
     $('.top').click(function(evt){
@@ -71,7 +73,13 @@ define([
       elSharedInfoMaxi.fadeIn();
     });
 
-    if ($('#projects-filter-results-view')) {
+    // we want Instagram in our news
+    if ($('.news-view').length) {
+      instagramView = new InstagramView({ el: '.news-view' });
+      instagramView.loadAndRender();
+    }
+
+    if ($('#projects-filter-results-view').length) {
       projectFilterResultsView = new ProjectFilterResultsView({ el: '#projects-filter-results-view' });
 
       $('.filters-container li').click(function(evt) {

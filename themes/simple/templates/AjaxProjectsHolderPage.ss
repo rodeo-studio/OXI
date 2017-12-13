@@ -4,7 +4,7 @@
       <% if GroupYear %>
         <div class="filter-marker">{$GroupYear}</div>
       <% end_if %>
-      <a href="{$BaseHref}projects/project-2">
+      <a href="{$Link}">
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding">
       <% loop ProjectPhotoElements %>
         <% if Pos = 1 %><img src="{$HeroImage.URL}"><% end_if %>

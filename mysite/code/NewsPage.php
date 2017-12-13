@@ -2,6 +2,7 @@
 class NewsPage extends Page {
 
   private static $db = array(
+    'NewsDate' => 'Date'
   );
 
   private static $has_many = array(
@@ -13,6 +14,10 @@ class NewsPage extends Page {
 
   function getCMSFields() {
     $fields = parent::getCMSFields();
+
+    $dateField = new DateField('NewsDate', 'Date');
+    $dateField->setConfig('showcalendar', true);
+    $fields->addFieldToTab('Root.Main', $dateField, 'Content');
 
     $config = GridFieldConfig_RelationEditor::create();
     $config->removeComponentsByType('GridFieldPaginator');

@@ -111,8 +111,8 @@ img.scale {
 }
 
 .footer-view a:hover {
-  color: inherit;
-  text-decoration: underline;
+  color: #DD0330;
+  text-decoration: none;
 }
 
 .footer-view .section .detail {
@@ -133,6 +133,7 @@ img.scale {
 }
 
 .footer-view .top:hover {
+  color: #DD0330;
   cursor: pointer;
 }
 
@@ -183,6 +184,29 @@ img.scale {
 .news-view .blank {
   display: none;
   min-height: 100px;
+}
+
+.news-view .full-width-container {
+  text-align: center;
+}
+
+.news-view .full-width {
+  display: inline-block;
+  text-align: left;
+  float: none;
+  margin: 0 auto;
+}
+
+.news-view .full-width.left {
+  display: inline-block;
+  text-align: left;
+  float: left;
+}
+
+.news-view .full-width.right {
+  display: inline-block;
+  text-align: left;
+  float: right;
 }
 
 .news-view .item {

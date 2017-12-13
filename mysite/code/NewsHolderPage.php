@@ -19,7 +19,6 @@ class NewsHolderPage extends Page {
 
     return $fields;
   }
-
 }
 
 class NewsHolderPage_Controller extends Page_Controller {
