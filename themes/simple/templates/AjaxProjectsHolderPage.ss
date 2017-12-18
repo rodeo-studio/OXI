@@ -19,6 +19,9 @@
           $MenuTitle
         <% end_if %>
         </h1>
+        <% if LocationFormatted %>
+          <h2 class="text">$LocationFormatted</h2>
+        <% end_if %>
         <% if Synopsis %>
           <h2 class="text">$Synopsis</h2>
         <% end_if %>

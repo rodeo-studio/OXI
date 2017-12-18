@@ -18,7 +18,11 @@ var APP = 'DefApp';
     <div class="filters-view">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
         <div class="filters-container">
-          <div class="title">Filter -</div>
+          <div class="title">
+          <span class="off">Filter +</span>
+          <span class="on">Filter -</span>
+          </div>
+          <div class="filters-panel">
           <ul>
             <li class="active" data-id="all">Year</li><li data-id="smallbuilds">Small Builds</li><li data-id="landscape">Landscape</li><li data-id="infrastructure">Infrastructure</li><li>Public Space</li>
           </ul>

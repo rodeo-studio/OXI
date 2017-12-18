@@ -49,11 +49,11 @@ img.scale {
 /******************************************/
 .header-view .logo {
   float: left;
-  margin: 14px 0 0 20px;
+  margin: 9px 0 0 9px;
 }
 
 .header-view .logo img {
-  width: 62px;
+  width: 76px;
 }
 
 .header-view .menus {
@@ -119,7 +119,7 @@ img.scale {
   padding-bottom: 52px;
 }
 
-.footer-view .title {
+.footer-view .contact .title {
   padding-bottom: 16px;
 }
 
@@ -137,8 +137,12 @@ img.scale {
   cursor: pointer;
 }
 
-.footer-view img {
-  width: 100px;
+.footer-view .logo {
+  margin-left: -15px; 
+}
+
+.footer-view .logo img {
+  width: 120px;
 }
 
 /* FILTERS VIEW */
@@ -149,6 +153,19 @@ img.scale {
 
 .filters-view .filters-container {
   padding: 32px 0 40px 0;
+}
+
+.filters-view .filters-container .title:hover {
+  color: #DD0330;
+  cursor: pointer;
+}
+
+.filters-view .filters-container .on {
+  display: none;
+}
+
+.filters-view .filters-container .filters-panel {
+  display: none;
 }
 
 .filters-view ul {
@@ -225,6 +242,10 @@ img.scale {
   text-decoration: none;
 }
 
+.news-view .item a:hover .read-more {
+  text-decoration: underline;
+}
+
 .news-view .type {
   padding-bottom: 14px;
   font-family: 'CalibreWeb-Semibold';
@@ -247,11 +268,11 @@ img.scale {
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .header-view .logo {
-    margin: 10px 0 0 28px;
+    margin: 0 0 0 18px;
   }
 
   .header-view .logo img {
-    width: 102px;
+    width: 126px;
   }
 
   .header-view .menus {
@@ -336,16 +357,24 @@ img.scale {
   .news-view .more {
     padding-top: 12px;
   }
+
+  .footer-view .logo {
+    margin-top: -15px;
+  }
+
+  .footer-view .logo img {
+    width: 132px;
+  }
 }
 
 /* Small devices (tablets, 992px and up) */
 @media (min-width: 992px) {
   .header-view .logo {
-    margin: 15px 0 0 42px;
+    margin: 0 0 0 22px;
   }
 
   .header-view .logo img {
-    width: 100%;
+    width: 168px;
   }
 
   .header-view .menus {
@@ -361,8 +390,12 @@ img.scale {
     padding: 44px 86px 56px 44px;
   }
 
-  .footer-view img {
-    width: 122px;
+  .footer-view .logo {
+    margin-top: -7px;
+  }
+  
+  .footer-view .logo img {
+    width: 142px;
   }
 
   .footer-view p {

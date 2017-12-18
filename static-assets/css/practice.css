@@ -48,6 +48,9 @@
   cursor: pointer;
   color: #DD0330;
 }
+.practice-people-view .person-container.active {
+  color: #DD0330;
+}
 
 .practice-people-view .name {
   padding-bottom: 6px;

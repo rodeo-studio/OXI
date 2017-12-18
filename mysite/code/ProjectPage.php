@@ -5,6 +5,7 @@ class ProjectPage extends Page {
     'ProjectDate' => 'Date',  
     'Feature' => 'Boolean',
     'LabelFormatted' => 'Text',
+    'LocationFormatted' => 'Text',
     'Synopsis' => 'Text',
     'TagSmallBuilds' => 'Boolean',
     'TagLandscape' => 'Boolean',
@@ -35,6 +36,7 @@ class ProjectPage extends Page {
     $fields->addFieldToTab("Root.Main", new CheckboxField ('TagInfrastructure', 'Infrastructure'), 'Content');
     $fields->addFieldToTab("Root.Main", new CheckboxField ('TagPublicSpace', 'Public Space'), 'Content');
     
+    $fields->addFieldToTab('Root.Main', new TextareaField('LocationFormatted', 'Location'), 'Content');
     $fields->addFieldToTab('Root.Main', new TextField('Synopsis', 'Synopsis'), 'Content');
 
     $config = GridFieldConfig_RelationEditor::create();

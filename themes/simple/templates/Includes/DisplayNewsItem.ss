@@ -20,7 +20,7 @@
             <div class="image"><img src="{$HeroImage.URL}"></div>
           <% end_if %>
         <% end_control %>
-        <h2>{$MenuTitle} Read more</h2>
+        <h2>{$MenuTitle} <span class="read-more">Read more</span></h2>
       <% else %>
         <h1>{$MenuTitle}<div class="more"><i class="fa fa-caret-right"></i></div></h1>
       <% end_if %>

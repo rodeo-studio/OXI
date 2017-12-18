@@ -25,6 +25,9 @@ var APP = 'DefApp';
           $MenuTitle
         <% end_if %>
         </h1>
+        <% if LocationFormatted %>
+          <h2>$LocationFormatted</h2>
+        <% end_if %>
         $Content</div>
       </div>
     </div>

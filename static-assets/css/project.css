@@ -114,23 +114,6 @@
 
   .project-detail-photos-view .image-element-container {
     padding: 11px 8px;
-    height: 438px;
-    overflow: hidden;
-  }
-  .project-detail-photos-view .image-element-container.small {
-    height: 235px;
-  }
-
-  .project-detail-photos-view .image-element {
-    width: 100%;
-    height: 100%;
-    background-size: 100% auto;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .project-detail-photos-view .image-element img {
-    display: none;
   }
 
   .project-view .photos-footer {
@@ -177,10 +160,6 @@
 
   .project-detail-photos-view .image-element-container {
     padding: 16px 10px;
-    height: 584px;
-  }
-  .project-detail-photos-view .image-element-container.small {
-    height: 313px;
   }
 
   .project-view .photos-footer {

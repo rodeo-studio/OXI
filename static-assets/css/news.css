@@ -95,11 +95,6 @@
 
   .newsitem-detail-photos-view .image-element-container {
     padding: 11px 8px;
-    height: 438px;
-    overflow: hidden;
-  }
-  .newsitem-detail-photos-view .image-element-container.small {
-    height: 235px;
   }
 
   .newsitem-detail-photos-view .image-element {
@@ -108,10 +103,6 @@
     background-size: 100% auto;
     background-position: center;
     background-repeat: no-repeat;
-  }
-
-  .newsitem-detail-photos-view .image-element img {
-    display: none;
   }
 
   .newsitem-view .photos-footer {
@@ -154,10 +145,6 @@
 
   .newsitem-detail-photos-view .image-element-container {
     padding: 16px 10px;
-    height: 584px;
-  }
-  .newsitem-detail-photos-view .image-element-container.small {
-    height: 313px;
   }
 
   .newsitem-view .photos-footer {

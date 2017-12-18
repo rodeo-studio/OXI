@@ -36,9 +36,25 @@ define([
       window.history.back();
     });
 
+    $('.filters-view .filters-container .title').click(function(evt){
+      console.log('c');
+      if ($(this).hasClass('active')) {
+        $(this).removeClass('active');
+        $('.on', this).hide();
+        $('.off', this).show();
+      }
+      else {
+        $(this).addClass('active');
+        $('.on', this).show();
+        $('.off', this).hide();
+      }
+      $('.filters-panel').toggle();
+    });
+
     $('.person-container').click(function(evt){
       // hide any already open
       $('.person-info-container').hide();
+      $('.person-container').removeClass('active');
 
       var elElement = $(this).parents('.person');
 
@@ -47,6 +63,8 @@ define([
         nActiveProfileID = 0;
         return;
       }
+
+      $(this).addClass('active');
 
       nActiveProfileID = elElement.attr('data-id');
 

@@ -2,7 +2,6 @@
 class NewsPhotoElement extends DataObject {
   private static $db = array(
     'Size'=>'Int',
-    'Style'=>'Int',
     'SortID'=>'Int'
   );
 
@@ -16,12 +15,6 @@ class NewsPhotoElement extends DataObject {
 
     return $source[$this->Size]; 
   }
-
-  public function FormatStyle() { 
-    $source = array("Big", "Small");
-
-    return $source[$this->Style]; 
-  }
   
   // this function creates the thumbnail for the summary fields to use 
   public function ImageThumbnail() { 
@@ -30,7 +23,6 @@ class NewsPhotoElement extends DataObject {
   
   public static $summary_fields = array( 
     'FormatSize' => 'Size',
-    'FormatStyle' => 'Style',
     'ImageThumbnail' => 'Thumbnail' 
   );
   
@@ -47,16 +39,8 @@ class NewsPhotoElement extends DataObject {
     $uploadField = new UploadField($name = 'HeroImage', $title = 'Image');
     $uploadField->setCanUpload(false);
   
-    $styleField = new OptionsetField(
-      $name = "Style",
-      $title = "Style",
-      $source = array("Big", "Small"),
-      $value = 0
-    );
-
     $fields = new FieldList (
       $sizeField, 
-      $styleField,
       new LiteralField ('literalfield', '<strong>Image Element</strong>'), 
       $uploadField);
 
