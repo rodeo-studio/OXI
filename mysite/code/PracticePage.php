@@ -5,6 +5,7 @@ class PracticePage extends Page {
   );
 
   private static $has_many = array(
+    'NewsElements' => 'PracticeNewsElement',
     'PracticePersonElements' => 'PracticePersonElement'
   );
 
@@ -13,6 +14,19 @@ class PracticePage extends Page {
 
   function getCMSFields() {
     $fields = parent::getCMSFields();
+
+    // News
+    $config = GridFieldConfig_RelationEditor::create();
+    $config->removeComponentsByType('GridFieldPaginator');
+    $config->removeComponentsByType('GridFieldPageCount');
+    $config->addComponent(new GridFieldSortableRows('SortID'));
+    $newsElementField = new GridField(
+      'NewsElements', // Field name
+      'News Element', // Field title
+      $this->NewsElements(),
+      $config
+    );
+    $fields->addFieldToTab('Root.NewsElements', $newsElementField); 
 
     // People
     $configPeople = GridFieldConfig_RelationEditor::create();

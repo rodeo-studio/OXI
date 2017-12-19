@@ -14,6 +14,7 @@ class ProjectPage extends Page {
   );
 
   private static $has_many = array(
+    'NewsElements' => 'ProjectNewsElement',
     'ProjectPhotoElements' => 'ProjectPhotoElement'
   );
 
@@ -22,6 +23,19 @@ class ProjectPage extends Page {
 
   function getCMSFields() {
     $fields = parent::getCMSFields();
+
+    //News
+    $config = GridFieldConfig_RelationEditor::create();
+    $config->removeComponentsByType('GridFieldPaginator');
+    $config->removeComponentsByType('GridFieldPageCount');
+    $config->addComponent(new GridFieldSortableRows('SortID'));
+    $newsElementField = new GridField(
+      'NewsElements', // Field name
+      'News Element', // Field title
+      $this->NewsElements(),
+      $config
+    );
+    $fields->addFieldToTab('Root.NewsElements', $newsElementField); 
 
     $fields->addFieldToTab('Root.Main', new TextareaField('LabelFormatted','Label (formatted)'), 'Content'); 
     $fields->addFieldToTab('Root.Main', new CheckboxField('Feature', 'Feature on home page'), 'Content'); 

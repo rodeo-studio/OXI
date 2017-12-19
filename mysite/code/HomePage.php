@@ -6,7 +6,7 @@ class HomePage extends Page {
   );
 
   private static $has_many = array(
-    'HomeNewsElements' => 'HomeNewsElement'
+    'NewsElements' => 'HomeNewsElement'
   );
 
   private static $has_one = array(
@@ -24,13 +24,13 @@ class HomePage extends Page {
     $config->removeComponentsByType('GridFieldPaginator');
     $config->removeComponentsByType('GridFieldPageCount');
     $config->addComponent(new GridFieldSortableRows('SortID'));
-    $homeNewsElementField = new GridField(
-      'HomeNewsElements', // Field name
+    $newsElementField = new GridField(
+      'NewsElements', // Field name
       'News Element', // Field title
-      $this->HomeNewsElements(),
+      $this->NewsElements(),
       $config
     );
-    $fields->addFieldToTab('Root.NewsElements', $homeNewsElementField); 
+    $fields->addFieldToTab('Root.NewsElements', $newsElementField); 
 
     return $fields;
   }

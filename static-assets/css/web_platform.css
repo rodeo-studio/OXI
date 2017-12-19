@@ -99,6 +99,11 @@ img.scale {
   font-family: 'CalibreWeb-Semibold';
 }
 
+/* 171219 MLA - HIDE UNTIL MAILCHIMP SETUP */
+.footer-view .subscribe {
+  display: none;
+}
+
 .footer-view .footer-container .logo {
   padding-top: 6px;
 }

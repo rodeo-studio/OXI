@@ -1,6 +1,6 @@
-<% if HomeNewsElements %>
+<% if NewsElements %>
   <div class="news-view clearfix">
-    <% loop HomeNewsElements %>  
+    <% loop NewsElements %>  
       <% if Size = 1 %>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding full-width-container">
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding full-width">
