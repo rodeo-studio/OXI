@@ -37,7 +37,6 @@ define([
     });
 
     $('.filters-view .filters-container .title').click(function(evt){
-      console.log('c');
       if ($(this).hasClass('active')) {
         $(this).removeClass('active');
         $('.on', this).hide();
@@ -80,7 +79,7 @@ define([
       $('.email a', elSharedInfoMini).attr('href', 'mailto:' + strEmail);
       $('.email a', elSharedInfoMini).html(strEmail);
       $('.projects-summary', elSharedInfoMini).html(strProjectsSummary);
-      elSharedInfoMini.fadeIn();
+      elSharedInfoMini.fadeIn(1000);
 
       var elSharedInfoMaxi = $(elElement).nextAll('.shared-info-maxi').eq(0);
       $('.image img', elSharedInfoMaxi).attr('src', strImageURL);
@@ -88,7 +87,7 @@ define([
       $('.email a', elSharedInfoMaxi).attr('href', 'mailto:' + strEmail);
       $('.email a', elSharedInfoMaxi).html(strEmail);
       $('.projects-summary', elSharedInfoMaxi).html(strProjectsSummary);
-      elSharedInfoMaxi.fadeIn();
+      elSharedInfoMaxi.fadeIn(1000);
     });
 
     // we want Instagram in our news

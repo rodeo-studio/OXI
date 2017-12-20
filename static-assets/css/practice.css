@@ -41,7 +41,7 @@
 }
 
 .practice-people-view .person-container {
-  height: 113px;
+  height: 140px;
   padding: 40px 10px 10px 10px;
 }
 .practice-people-view .person-container:hover {
@@ -155,10 +155,6 @@
     font-size: 2.3em;
   }
 
-  .practice-people-view .person-container {
-    height: auto;
-  }
-  
   .practice-people-view .person-info-container.row {
     margin-left: -20px;
     margin-right: -20px;

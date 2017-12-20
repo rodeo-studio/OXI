@@ -21,7 +21,7 @@ var APP = 'DefApp';
       </div>
     </div>
 
-    <div class="practice-people-view clearfix">
+    <div class="practice-people-view flex-grid clearfix">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding"><div class="title"><h1>People</h1></div></div>
 
       <% loop PracticePersonElementsEdited %>
