@@ -170,4 +170,8 @@
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .project-detail-view .container {
+    padding: 0;
+    width: 726px;
+  }
 }

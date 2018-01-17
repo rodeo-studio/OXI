@@ -3,7 +3,7 @@
     <div class="sections">
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 nopadding section">
         <div class="address detail">
-        <div class="title"><div class="logo"><img src="static-assets/images/oxigen-logo_black-rgb.svg"></div></div>
+        <div class="title"><div class="logo"><img src="static-assets/images/oxigen-logo_black-rgb_v2.svg"></div></div>
         <p>
         Adelaide Studio<br/>
         98–100 Halifax Steet<br/>
