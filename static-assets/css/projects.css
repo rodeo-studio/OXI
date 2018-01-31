@@ -20,7 +20,7 @@
   text-decoration: none;
 }
 
-.projects-filter-view a:hover {
+.no-touchevents .projects-filter-view a:hover {
   color: #DD0330;
   text-decoration: none;
 }

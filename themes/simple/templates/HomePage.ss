@@ -13,34 +13,36 @@ var APP = 'DefApp';
 
 <div id="top" class="home-view">
   <div class="container-fluid nopadding">
-    <div class="projects-view clearfix">
-      <% loop Projects %>
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
-          <a href="{$BaseHref}projects/{$URLSegment}">
-          <% loop ProjectPhotoElements %>
-            <% if Pos = 1 %><img src="{$HeroImage.URL}"><% end_if %>
-          <% end_loop %>
-          <div class="detail">
-          <h1>
-          <% if LabelFormatted %>
-            $LabelFormatted
-          <% else %>  
-            $MenuTitle
-          <% end_if %>
-          </h1>
-          <% if Synopsis %>
-            <h2 class="text">$Synopsis</h2>
-          <% end_if %>
+    <div id="content">
+      <div class="projects-view clearfix">
+        <% loop Projects %>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
+            <a href="{$BaseHref}projects/{$URLSegment}">
+            <% loop ProjectPhotoElements %>
+              <% if Pos = 1 %><img src="{$HeroImage.URL}"><% end_if %>
+            <% end_loop %>
+            <div class="detail">
+            <h1>
+            <% if LabelFormatted %>
+              $LabelFormatted
+            <% else %>  
+              $MenuTitle
+            <% end_if %>
+            </h1>
+            <% if Synopsis %>
+              <h2 class="text">$Synopsis</h2>
+            <% end_if %>
+            </div>
+            </a>
           </div>
-          </a>
-        </div>
-      <% end_loop %>
-    </div>
+        <% end_loop %>
+      </div>
 
-    <% include DisplayNews %>
-    <% include DisplayFooter %>
-    <% include DisplayHeader %>
+      <% include DisplayNews %>
+      <% include DisplayFooter %>
+    </div>
   </div>
+  <% include DisplayHeader %>
 </div>
 
 <% include DisplayAnalytics %>

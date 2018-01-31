@@ -44,7 +44,7 @@
   height: 140px;
   padding: 40px 10px 10px 10px;
 }
-.practice-people-view .person-container:hover {
+.no-touchevents .practice-people-view .person-container:hover {
   cursor: pointer;
   color: #DD0330;
 }
@@ -203,7 +203,7 @@
 
   .practice-detail-view .container {
     padding: 0;
-    width: 620px;
+    width: 726px;
   }
 
   .practice-people-view {
@@ -243,4 +243,13 @@
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .practice-detail-view .container {
+    width: 726px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .practice-detail-view .container {
+    width: 1180px;
+  }
 }

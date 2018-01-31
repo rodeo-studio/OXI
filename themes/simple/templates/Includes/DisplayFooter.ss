@@ -21,8 +21,8 @@
         <div class="contact detail">
         <h1 class="title">Contact</h1>
         <p>
-        T+61 8 7324 9600<br/>
-        <a href="mailto:design@oxigen.net.au">design@oxigen.net.au</a>
+        T<a href="tel:{$Home.SocialPhoneReal}">{$Home.SocialPhone}</a><br/>
+        <a href="mailto:{$Home.SocialEmail}">{$Home.SocialEmail}</a>
         <br/><br/>
         <a href="{$Home.SocialInstagram}" target="_blank">Instagram</a>
         </p>

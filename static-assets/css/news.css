@@ -3,11 +3,6 @@
 .newsitem-view {
 }
 
-.newsitem-view .back-link:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
 .newsitem-view .container a,
 .newsitem-view .container a:visited,
 .newsitem-view .container a:active {
@@ -136,7 +131,7 @@
 
   .newsitem-detail-view .container {
     padding: 0;
-    width: 620px;
+    width: 726px;
   }
 
   .newsitem-detail-photos-view {
@@ -155,4 +150,13 @@
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .newsitem-detail-view .container {
+    width: 726px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .newsitem-detail-view .container {
+    width: 1180px;
+  }
 }

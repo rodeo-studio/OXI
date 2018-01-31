@@ -2,7 +2,7 @@
 class PracticePersonElement extends DataObject {
   private static $db = array(
     'Name' => 'Varchar',
-    'Title' => 'Varchar',
+    'Title' => 'Text',
     'SortID'=>'Int',
     'ProfileInfo' => 'HTMLText',
     'Email' => 'Varchar',

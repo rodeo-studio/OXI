@@ -28,7 +28,7 @@
   <script type="text/template" id="postInstagramViewTemplate">
     <a href="{{= data.link }}" target="_blank">
     <div class="image"><img src="{{= data.images.standard_resolution.url }}"></div>
-    <h2>{{= data.caption.text }}</h2>
+    <div class="caption">{{= data.caption.text }}</div>
     </a>
   </script>
 <% end_if %>

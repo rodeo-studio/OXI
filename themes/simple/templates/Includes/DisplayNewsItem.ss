@@ -17,10 +17,10 @@
       <% if NewsPhotoElements %>
         <% control NewsPhotoElements %>
           <% if Pos = 1 %>
-            <div class="image"><img src="{$HeroImage.URL}"></div>
+            <div class="image clearfix"><img src="{$HeroImage.URL}"></div>
           <% end_if %>
         <% end_control %>
-        <h2>{$MenuTitle} <span class="read-more">Read more</span></h2>
+        <div class="caption">{$MenuTitle} <span class="read-more">Read more</span></div>
       <% else %>
         <h1>{$MenuTitle}<div class="more"><i class="fa fa-caret-right"></i></div></h1>
       <% end_if %>

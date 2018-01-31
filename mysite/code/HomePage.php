@@ -2,6 +2,9 @@
 class HomePage extends Page {
 
   private static $db = array(
+    'SocialPhone' => 'Text',
+    'SocialPhoneReal' => 'Text',
+    'SocialEmail' => 'Text',
     'SocialInstagram' => 'Text'
   );
 
@@ -15,6 +18,9 @@ class HomePage extends Page {
   function getCMSFields() {
     $fields = parent::getCMSFields();
 
+    $fields->addFieldToTab('Root.Social', new TextField('SocialPhone', 'Phone number'));
+    $fields->addFieldToTab('Root.Social', new TextField('SocialPhoneReal', 'Phone number (valid for dialling)'));
+    $fields->addFieldToTab('Root.Social', new TextField('SocialEmail', 'Email address'));
     $fields->addFieldToTab('Root.Social', new TextField('SocialInstagram', 'Instagram URL'));
 
     // remove fields

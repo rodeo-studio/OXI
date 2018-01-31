@@ -1,10 +1,7 @@
-/* HEADER VIEW */
+/* CONTENT */
 /******************************************/
-.header-view {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+#content {
+    padding-top: 0;
 }
 
 /* HOME VIEW */
@@ -30,7 +27,7 @@
   text-decoration: none;
 }
 
-.projects-view a:hover {
+.no-touchevents .projects-view a:hover {
   color: #DD0330;
   text-decoration: none;
 }

@@ -79,7 +79,7 @@ define([
       $('.email a', elSharedInfoMini).attr('href', 'mailto:' + strEmail);
       $('.email a', elSharedInfoMini).html(strEmail);
       $('.projects-summary', elSharedInfoMini).html(strProjectsSummary);
-      elSharedInfoMini.fadeIn(1000);
+      elSharedInfoMini.fadeIn(500);
 
       var elSharedInfoMaxi = $(elElement).nextAll('.shared-info-maxi').eq(0);
       $('.image img', elSharedInfoMaxi).attr('src', strImageURL);
@@ -87,7 +87,7 @@ define([
       $('.email a', elSharedInfoMaxi).attr('href', 'mailto:' + strEmail);
       $('.email a', elSharedInfoMaxi).html(strEmail);
       $('.projects-summary', elSharedInfoMaxi).html(strProjectsSummary);
-      elSharedInfoMaxi.fadeIn(1000);
+      elSharedInfoMaxi.fadeIn(500);
     });
 
     // we want Instagram in our news
