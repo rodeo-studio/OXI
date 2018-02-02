@@ -110,7 +110,7 @@
   }
 
   .project-detail-photos-view .image-element-container {
-    padding: 8px;
+    padding: 10px;
   }
 
   .project-view .photos-footer {
@@ -153,10 +153,6 @@
 
   .project-detail-photos-view {
     padding: 0 34px;
-  }
-
-  .project-detail-photos-view .image-element-container {
-    padding: 10px;
   }
 
   .project-view .photos-footer {
