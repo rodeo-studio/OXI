@@ -5,6 +5,7 @@ class HomePage extends Page {
     'SocialPhone' => 'Text',
     'SocialPhoneReal' => 'Text',
     'SocialEmail' => 'Text',
+    'SocialMap' => 'Text',
     'SocialInstagram' => 'Text'
   );
 
@@ -21,6 +22,7 @@ class HomePage extends Page {
     $fields->addFieldToTab('Root.Social', new TextField('SocialPhone', 'Phone number'));
     $fields->addFieldToTab('Root.Social', new TextField('SocialPhoneReal', 'Phone number (valid for dialling)'));
     $fields->addFieldToTab('Root.Social', new TextField('SocialEmail', 'Email address'));
+    $fields->addFieldToTab('Root.Social', new TextField('SocialMap', 'Map URL'));
     $fields->addFieldToTab('Root.Social', new TextField('SocialInstagram', 'Instagram URL'));
 
     // remove fields

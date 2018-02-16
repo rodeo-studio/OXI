@@ -17,6 +17,11 @@ define([
       var url = "https://api.instagram.com/v1/media/shortcode/" + strShortCode + "?access_token=1574265685.1677ed0.fbe08459160947379f24ddd6b45c6e55";
       $.getJSON(url, function(result){
         $('.dynamic-content', el).html(self.template(result));
+
+        // truncate
+        $('.truncate', el).each(function(index){
+          $(this).html($.truncate($(this).html(), {length: $(this).attr('data-truncate')}));
+        });
       });
     },
 
@@ -27,7 +32,7 @@ define([
         self.load($(this), $(this).attr('data-ig-shortcode'));
       })
     }
-    
+
   });
 
   return InstagramView;

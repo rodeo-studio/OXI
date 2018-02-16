@@ -5,10 +5,11 @@ define([
   'backbone',
   'bootstrap',
   'modernizr',
+  'truncate',
   'imageScale',
   'views/ProjectFilterResultsView',
   'views/InstagramView'
-], function(_, Backbone, bootstrap, modernizr, imageScale, ProjectFilterResultsView, InstagramView){
+], function(_, Backbone, bootstrap, modernizr, truncate, imageScale, ProjectFilterResultsView, InstagramView){
   app.dispatcher = _.clone(Backbone.Events);
 
   _.templateSettings = {

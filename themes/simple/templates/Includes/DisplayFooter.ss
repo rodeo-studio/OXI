@@ -7,7 +7,7 @@
         <p>
         Adelaide Studio<br/>
         98–100 Halifax Steet<br/>
-        Adelaide 5000 SA
+        Adelaide SA 5000
         </p>
         <p>
         Canberra Studio<br/>
@@ -23,6 +23,8 @@
         <p>
         T<a href="tel:{$Home.SocialPhoneReal}">{$Home.SocialPhone}</a><br/>
         <a href="mailto:{$Home.SocialEmail}">{$Home.SocialEmail}</a>
+        <br/><br/>
+        <a href="{$Home.SocialMap}" target="_blank">Map</a>
         <br/><br/>
         <a href="{$Home.SocialInstagram}" target="_blank">Instagram</a>
         </p>

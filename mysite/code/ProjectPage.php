@@ -7,10 +7,18 @@ class ProjectPage extends Page {
     'LabelFormatted' => 'Text',
     'LocationFormatted' => 'Text',
     'Synopsis' => 'Text',
-    'TagSmallBuilds' => 'Boolean',
-    'TagLandscape' => 'Boolean',
-    'TagInfrastructure' => 'Boolean',
-    'TagPublicSpace' => 'Boolean'
+    'TagArchitecture' => 'Boolean',
+    'TagStrategiesAndFrameworks' => 'Boolean',
+    'TagStreetsAndPublicRealm' => 'Boolean',
+    'TagPublicInfrastructure' => 'Boolean',
+    'TagParksAndOpenSpace' => 'Boolean',
+    'TagWaterfronts' => 'Boolean',
+    'TagGardens' => 'Boolean',
+    'TagEducation' => 'Boolean',
+    'TagSportAndRecreation' => 'Boolean',
+    'TagEcologyAndEnvironment' => 'Boolean',
+    'TagGreenfieldsDevelopments' => 'Boolean',
+    'TagConsultation' => 'Boolean'
   );
 
   private static $has_many = array(
@@ -45,10 +53,19 @@ class ProjectPage extends Page {
     $fields->addFieldToTab('Root.Main', $dateField, 'Content');
 
     $fields->addFieldToTab("Root.Main", new LiteralField ('literalfield', '<strong>Tags</strong>'), 'Content');
-    $fields->addFieldToTab("Root.Main", new CheckboxField ('TagSmallBuilds', 'Small Builds'), 'Content');
-    $fields->addFieldToTab("Root.Main", new CheckboxField ('TagLandscape', 'Landscape'), 'Content');
-    $fields->addFieldToTab("Root.Main", new CheckboxField ('TagInfrastructure', 'Infrastructure'), 'Content');
-    $fields->addFieldToTab("Root.Main", new CheckboxField ('TagPublicSpace', 'Public Space'), 'Content');
+    $fields->addFieldToTab("Root.Main", new CheckboxField ('TagArchitecture', 'Architecture'), 'Content');
+    $fields->addFieldToTab("Root.Main", new CheckboxField ('TagStrategiesAndFrameworks', 'Strategies & Frameworks'), 'Content');
+    $fields->addFieldToTab("Root.Main", new CheckboxField ('TagStreetsAndPublicRealm', 'Streets & Public Realm'), 'Content');
+    $fields->addFieldToTab("Root.Main", new CheckboxField ('TagPublicInfrastructure', 'Public Infrastructure'), 'Content');
+
+    $fields->addFieldToTab("Root.Main", new CheckboxField ('TagParksAndOpenSpace', 'Parks & Open Space'), 'Content');
+    $fields->addFieldToTab("Root.Main", new CheckboxField ('TagWaterfronts', 'Waterfronts'), 'Content');
+    $fields->addFieldToTab("Root.Main", new CheckboxField ('TagGardens', 'Gardens'), 'Content');
+    $fields->addFieldToTab("Root.Main", new CheckboxField ('TagEducation', 'Education'), 'Content');
+    $fields->addFieldToTab("Root.Main", new CheckboxField ('TagSportAndRecreation', 'Sport & Recreation'), 'Content');
+    $fields->addFieldToTab("Root.Main", new CheckboxField ('TagEcologyAndEnvironment', 'Ecology & Environment'), 'Content');
+    $fields->addFieldToTab("Root.Main", new CheckboxField ('TagGreenfieldsDevelopments', 'Greenfields Developments'), 'Content');
+    $fields->addFieldToTab("Root.Main", new CheckboxField ('TagConsultation', 'Consultation'), 'Content');
     
     $fields->addFieldToTab('Root.Main', new TextareaField('LocationFormatted', 'Location'), 'Content');
     $fields->addFieldToTab('Root.Main', new TextField('Synopsis', 'Synopsis'), 'Content');

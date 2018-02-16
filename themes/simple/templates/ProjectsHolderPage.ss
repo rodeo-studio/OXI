@@ -23,7 +23,19 @@ var APP = 'DefApp';
             </div>
             <div class="filters-panel">
             <ul>
-              <li class="active" data-id="all">Year</li><li data-id="smallbuilds">Small Builds</li><li data-id="landscape">Landscape</li><li data-id="infrastructure">Infrastructure</li><li>Public Space</li>
+              <li class="active" data-id="all">Year</li>
+              <li data-id="TagArchitecture">Architecture</li>
+              <li data-id="TagStrategiesAndFrameworks">Strategies & Frameworks</li>
+              <li data-id="TagStreetsAndPublicRealm">Streets & Public Realm</li>
+              <li data-id="TagPublicInfrastructure">Public Infrastructure</li>
+              <li data-id="TagParksAndOpenSpace">Parks & Open Space</li>
+              <li data-id="TagWaterfronts">Waterfronts</li>
+              <li data-id="TagGardens">Gardens</li>
+              <li data-id="TagEducation">Education</li>
+              <li data-id="TagSportAndRecreation">Sport & Recreation</li>
+              <li data-id="TagEcologyAndEnvironment">Ecology & Environment</li>
+              <li data-id="TagGreenfieldsDevelopments">Greenfields Developments</li>
+              <li data-id="TagConsultation">Consultation</li>    
             </ul>
             </div>
           </div>

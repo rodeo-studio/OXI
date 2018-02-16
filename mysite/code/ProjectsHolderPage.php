@@ -49,21 +49,13 @@ class ProjectsFilterPage_Controller extends Page_Controller {
     $ProjectFilter = '';
 
     if ($this->getRequest()->param('ProjectFilter')) {
+
       switch ($this->getRequest()->param('ProjectFilter')) {
-        case 'smallbuilds':
-          $ProjectFilter = 'TagSmallBuilds = 1';
+        case 'all':
           break;
 
-        case 'landscape':
-          $ProjectFilter = 'TagLandscape = 1';
-          break;
-
-        case 'infrastructure':
-          $ProjectFilter = 'TagInfrastructure = 1';
-          break;
-
-        case 'publicspace':
-          $ProjectFilter = 'TagPublicSpace = 1';
+        default:
+          $ProjectFilter = $this->getRequest()->param('ProjectFilter') . ' = 1';
           break;
       }
     }

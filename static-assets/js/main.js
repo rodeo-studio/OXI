@@ -8,11 +8,15 @@ require.config({
     async: 'libs/async',
     bootstrap: 'libs/bootstrap.min',
     modernizr: 'libs/modernizr-custom',
+    truncate: 'libs/jquery.truncate',
     imageScale: 'libs/image-scale.min',
     imagesLoaded: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min'
   },
   shim: {
     'bootstrap' : {
+      deps: ['jquery']
+    },
+    'truncate' : {
       deps: ['jquery']
     },
     'imageScale': {
