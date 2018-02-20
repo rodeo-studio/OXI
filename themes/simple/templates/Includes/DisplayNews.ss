@@ -27,7 +27,7 @@
 
   <script type="text/template" id="postInstagramViewTemplate">
     <a href="{{= data.link }}" target="_blank">
-    <div class="image"><img src="{{= data.images.standard_resolution.url }}"></div>
+    <div class="image"><img class="fadein" data-src="{{= data.images.standard_resolution.url }}"></div>
     <div class="caption truncate" data-truncate="150">{{= data.caption.text }}</div>
     </a>
   </script>

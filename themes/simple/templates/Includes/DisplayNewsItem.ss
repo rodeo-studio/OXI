@@ -17,7 +17,7 @@
       <% if NewsPhotoElements %>
         <% control NewsPhotoElements %>
           <% if Pos = 1 %>
-            <div class="image"><img src="{$HeroImage.URL}"></div>
+            <div class="image"><img class="fadein" data-src="{$HeroImage.URL}"></div>
           <% end_if %>
         <% end_control %>
         <div class="caption">{$MenuTitle} <span class="read-more">Read more</span></div>

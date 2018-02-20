@@ -18,6 +18,9 @@ define([
       $.getJSON(url, function(result){
         $('.dynamic-content', el).html(self.template(result));
 
+        // now load images
+        loadImages(el);
+
         // truncate
         $('.truncate', el).each(function(index){
           $(this).html($.truncate($(this).html(), {length: $(this).attr('data-truncate')}));

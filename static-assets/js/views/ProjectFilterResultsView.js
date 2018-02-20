@@ -31,6 +31,9 @@ define([
 
       $(this.el).html(self.response);
 
+      // now load images
+      loadImages($(this.el));
+
       return this;
     }
 

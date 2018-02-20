@@ -40,6 +40,10 @@ img {
   width: 100%;
 }
 
+img.fadein {
+  display: none;
+}
+
 img.scale {
   opacity: 0;
   width: 100%;

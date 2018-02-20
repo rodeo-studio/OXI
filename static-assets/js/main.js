@@ -30,6 +30,15 @@ require.config({
   }
 });
 
+function loadImages(elContainer){
+  $('img.fadein', elContainer).each(function(){
+    $(this).load(function(){
+      $(this).fadeIn();
+    });
+    $(this).attr('src', $(this).attr('data-src'));
+  });
+}
+
 // Load our app module and pass it to our definition function
 require(['controller/' + APP], function(App){
   App.initialize();

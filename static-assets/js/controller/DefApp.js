@@ -27,6 +27,8 @@ define([
     var instagramView = null;
     var projectFilterResultsView = null;
 
+    loadImages($('body'));
+
     $('.top').click(function(evt){
       $('html, body').animate({
         scrollTop: $("#top").offset().top

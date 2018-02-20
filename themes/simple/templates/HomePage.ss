@@ -19,7 +19,7 @@ var APP = 'DefApp';
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
             <a href="{$BaseHref}projects/{$URLSegment}">
             <% loop ProjectPhotoElements %>
-              <% if Pos = 1 %><img src="{$HeroImage.URL}"><% end_if %>
+              <% if Pos = 1 %><img class="fadein" data-src="{$HeroImage.URL}"><% end_if %>
             <% end_loop %>
             <div class="detail">
             <h1>

@@ -7,7 +7,7 @@
       <a href="{$Link}">
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding">
       <% loop ProjectPhotoElements %>
-        <% if Pos = 1 %><img src="{$HeroImage.URL}"><% end_if %>
+        <% if Pos = 1 %><img class="fadein" data-src="{$HeroImage.URL}"><% end_if %>
       <% end_loop %>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding">
