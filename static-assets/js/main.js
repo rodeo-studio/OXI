@@ -33,7 +33,7 @@ require.config({
 function loadImages(elContainer){
   $('img.fadein', elContainer).each(function(){
     $(this).load(function(){
-      $(this).fadeIn();
+      $(this).addClass('ready');
     });
     $(this).attr('src', $(this).attr('data-src'));
   });

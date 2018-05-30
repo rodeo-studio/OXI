@@ -44,7 +44,7 @@ var APP = 'DefApp';
               <div class="col-xs-12 nopadding">
                 <div class="person-info clearfix">
                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 nopadding">
-                    <div class="image"><img src=""></div>
+                    <div class="image"><img class="fadein" data-src=""></div>
                   </div>
                   <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 nopadding">
                     <div class="text">
@@ -66,7 +66,7 @@ var APP = 'DefApp';
               <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
                 <div class="person-info clearfix">
                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 nopadding">
-                    <div class="image"><img src=""></div>
+                    <div class="image"><img class="fadein" data-src=""></div>
                   </div>
                   <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 nopadding">
                     <div class="text">

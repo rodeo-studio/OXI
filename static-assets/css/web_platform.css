@@ -22,6 +22,20 @@ h2 {
   line-height: 1.2em;
 }
 
+a, 
+a:visited, 
+a:active {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid #000;
+}
+
+.no-touchevents a:hover {
+  color: #DD0330;
+  text-decoration: none;
+  border-bottom: 2px solid #DD0330;
+}
+
 /* BOOTSTRAP */
 /******************************************/
 .nopadding {
@@ -36,12 +50,21 @@ h2 {
   height: 100%;
 }
 
-img {
-  width: 100%;
+img.fadein {
+  opacity: 0;
 }
 
-img.fadein {
-  display: none;
+img.ready {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in;
+  -moz-transition: opacity 0.5s ease-in;
+  -o-transition: opacity 0.5s ease-in;
+  -ms-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;  
+}
+
+img {
+  width: 100%;
 }
 
 img.scale {
@@ -112,11 +135,13 @@ img.scale {
 .header-view a:active {
   color: inherit;
   text-decoration: none;
+  border-bottom: none;
 }
 
 .no-touchevents .header-view a:hover {
   color: #DD0330;
   text-decoration: none;
+  border-bottom: none;
 }
 
 /* FOOTER VIEW */
@@ -230,7 +255,7 @@ img.scale {
 /******************************************/
 .news-view {
   padding: 42px 20px 0px 20px;
-  background-color: #EAECE9;
+  background-color: #cacdc6;
 }
 
 .news-view .blank {
@@ -276,28 +301,17 @@ img.scale {
 .news-view .item a:active {
   color: inherit;
   text-decoration: none;
+  border-bottom: none;
 }
 
 .no-touchevents .news-view .item a:hover {
   color: #DD0330;
   text-decoration: none;
+  border-bottom: none;
 }
 
 .no-touchevents .news-view .item a:hover .read-more {
   border-bottom: 2px solid #DD0330;
-}
-
-.no-touchevents .news-view .item a:hover .image:after {
-  background: rgba(221, 3, 48, 0.5);
-}
-
-.item .image:after {
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .news-view .type {
@@ -326,7 +340,7 @@ img.scale {
 }
 
 .back-link .link {
-  border-bottom: 2px solid #000;
+  border-bottom: none;
 }
 
 .no-touchevents .back-link:hover {
@@ -334,7 +348,7 @@ img.scale {
   color: #DD0330;
 }
 .no-touchevents .back-link:hover .link {
-  border-bottom: 2px solid transparent;
+  border-bottom: none;
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -400,12 +414,13 @@ img.scale {
   }
 
   .filters-view .filters-container {
+    width: 360px;
     padding-bottom: 18px;
   }
 
   .filters-view li {
     display: inline-block;
-    padding: 0 8px;
+    padding: 0 16px 0 0;
   }
   .filters-view li:first-child {
     padding-left: 0;
@@ -481,6 +496,7 @@ img.scale {
   }
 
   .filters-view .filters-container {
+    width: 480px;
     padding-bottom: 32px;
   }
 

@@ -59,6 +59,6 @@ class HomePage_Controller extends Page_Controller {
     $sort = "",
     $join = "",
     $limit = "" 
-    );
+    )->sort("RAND()");
   }
 }

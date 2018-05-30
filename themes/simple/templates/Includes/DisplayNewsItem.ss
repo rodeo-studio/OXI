@@ -1,19 +1,18 @@
 <% if Type = 2 %>
   <div class="item" data-type="instagram" data-ig-shortcode="{$InstagramShortcode}">
-    <div class="type">Instagram</div>
     <span class="dynamic-content"></span>
   </div>
 <% else %>
   <div class="item">
-    <div class="type">
-    <% if Type = 1 %>
-      Event
-    <% else %>  
-      News
-    <% end_if %>
-    </div>
     <% control PageLinkPage %>
       <a href="$Link">
+      <div class="type">
+      <% if Top.Type = 1 %>
+        Event
+      <% else %>  
+        News
+      <% end_if %>
+      </div>
       <% if NewsPhotoElements %>
         <% control NewsPhotoElements %>
           <% if Pos = 1 %>

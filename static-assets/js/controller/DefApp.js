@@ -77,7 +77,8 @@ define([
 
       // show shared info (next sibling)
       var elSharedInfoMini = $(elElement).nextAll('.shared-info-mini').eq(0);
-      $('.image img', elSharedInfoMini).attr('src', strImageURL);
+      $('img.ready', elSharedInfoMini).removeClass('ready');
+      $('.image img', elSharedInfoMini).attr('data-src', strImageURL);
       $('.content', elSharedInfoMini).html(strContent);
       $('.email a', elSharedInfoMini).attr('href', 'mailto:' + strEmail);
       $('.email a', elSharedInfoMini).html(strEmail);
@@ -85,12 +86,16 @@ define([
       elSharedInfoMini.fadeIn(500);
 
       var elSharedInfoMaxi = $(elElement).nextAll('.shared-info-maxi').eq(0);
-      $('.image img', elSharedInfoMaxi).attr('src', strImageURL);
+      $('img.ready', elSharedInfoMaxi).removeClass('ready');
+      $('.image img', elSharedInfoMaxi).attr('data-src', strImageURL);
       $('.content', elSharedInfoMaxi).html(strContent);
       $('.email a', elSharedInfoMaxi).attr('href', 'mailto:' + strEmail);
       $('.email a', elSharedInfoMaxi).html(strEmail);
       $('.projects-summary', elSharedInfoMaxi).html(strProjectsSummary);
       elSharedInfoMaxi.fadeIn(500);
+
+      loadImages(elSharedInfoMini);
+      loadImages(elSharedInfoMaxi);
     });
 
     // we want Instagram in our news

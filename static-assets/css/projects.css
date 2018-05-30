@@ -11,6 +11,7 @@
 /* PROJECTS FILTER VIEW */
 /******************************************/
 .projects-filter-view {
+  min-height: 800px;
 }
 
 .projects-filter-view a,
