@@ -15,6 +15,7 @@ define([
       var self = this;
 
       var url = "https://api.instagram.com/v1/media/shortcode/" + strShortCode + "?access_token=1574265685.1677ed0.fbe08459160947379f24ddd6b45c6e55";
+//      console.log(url);
       $.getJSON(url, function(result){
         $('.dynamic-content', el).html(self.template(result));
 

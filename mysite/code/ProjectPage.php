@@ -23,6 +23,7 @@ class ProjectPage extends Page {
   );
 
   private static $has_one = array(
+    'HeroImage' => 'Image'
   );
 
   function getCMSFields() {
@@ -40,6 +41,10 @@ class ProjectPage extends Page {
       $config
     );
     $fields->addFieldToTab('Root.NewsElements', $newsElementField); 
+
+    $uploadField = new UploadField($name = 'HeroImage', $title = 'Feature Image (optional)');
+    $uploadField->setCanUpload(false);
+    $fields->addFieldToTab('Root.Main', $uploadField, 'Content'); 
 
     $fields->addFieldToTab('Root.Main', new TextareaField('LabelFormatted','Label (formatted)'), 'Content'); 
     $fields->addFieldToTab('Root.Main', new CheckboxField('Feature', 'Feature on home page'), 'Content'); 

@@ -10,6 +10,7 @@ class NewsPage extends Page {
   );
 
   private static $has_one = array(
+    'HeroImage' => 'Image'
   );
 
   function getCMSFields() {
@@ -18,6 +19,10 @@ class NewsPage extends Page {
     $dateField = new DateField('NewsDate', 'Date');
     $dateField->setConfig('showcalendar', true);
     $fields->addFieldToTab('Root.Main', $dateField, 'Content');
+
+    $uploadField = new UploadField($name = 'HeroImage', $title = 'Feature Image (optional)');
+    $uploadField->setCanUpload(false);
+    $fields->addFieldToTab('Root.Main', $uploadField, 'Content'); 
 
     $config = GridFieldConfig_RelationEditor::create();
     $config->removeComponentsByType('GridFieldPaginator');
