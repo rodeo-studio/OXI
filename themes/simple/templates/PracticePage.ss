@@ -82,6 +82,9 @@ var APP = 'DefApp';
               </div>
             </div>
           <% end_if %>
+
+          <div class="hidden"><img src="$HeroImage.URL"></div>
+
         <% end_loop %>
       </div>
 
