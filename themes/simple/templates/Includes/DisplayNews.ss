@@ -23,14 +23,20 @@
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding"><% include DisplayNewsItem %></div>
       <% end_if %>
     <% end_loop %>
+    <div id="instagram-view"></div>
   </div>
-
-  <script type="text/template" id="postInstagramViewTemplate">
-    <a href="{{= data.link }}" target="_blank">
-    <div class="type">Instagram</div>
-    <div class="image"><img class="fadein" data-src="{{= data.images.standard_resolution.url }}"></div>
-    <div class="caption truncate" data-truncate="150">{{= data.caption.text }}</div>
-    </a>
-  </script>
 <% end_if %>
 
+<script type="text/template" id="instagramFeedViewTemplate">
+{{ _.each(data, function(post, index) { }}
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding">
+    <div class="item" data-type="instagram">
+    <a href="{{= post.link }}" target="_blank">
+    <div class="type">Instagram</div>
+    <div class="image"><img class="fadein" data-src="{{= post.images.standard_resolution.url }}"></div>
+    <div class="caption truncate" data-truncate="150">{{= post.caption.text }}</div>
+    </a>
+    </div>
+  </div>
+{{ }); }}
+</script>

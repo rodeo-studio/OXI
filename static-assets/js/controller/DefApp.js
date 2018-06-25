@@ -8,8 +8,8 @@ define([
   'truncate',
   'imageScale',
   'views/ProjectFilterResultsView',
-  'views/InstagramView'
-], function(_, Backbone, bootstrap, modernizr, truncate, imageScale, ProjectFilterResultsView, InstagramView){
+  'views/InstagramFeedView'
+], function(_, Backbone, bootstrap, modernizr, truncate, imageScale, ProjectFilterResultsView, InstagramFeedView){
   app.dispatcher = _.clone(Backbone.Events);
 
   _.templateSettings = {
@@ -22,9 +22,10 @@ define([
     var self = this;
     
     app.dispatcher.on("ProjectFilterResultsView:loaded", onProjectFilterResultsLoaded);
+    app.dispatcher.on("InstagramFeedView:loaded", onInstagramFeedLoaded);
 
     var nActiveProfileID = 0;
-    var instagramView = null;
+    var instagramFeedView = null;
     var projectFilterResultsView = null;
 
     loadImages($('body'));
@@ -100,8 +101,12 @@ define([
 
     // we want Instagram in our news
     if ($('.news-view').length) {
-      instagramView = new InstagramView({ el: '.news-view' });
-      instagramView.loadAndRender();
+      var nPosts = 10;
+      if (INSTAGRAM_POSTS != '') {
+        nPosts = INSTAGRAM_POSTS;
+      }
+      instagramFeedView = new InstagramFeedView({ el: '#instagram-view', num_posts: nPosts });
+      instagramFeedView.load();
     }
 
     if ($('#projects-filter-results-view').length) {
@@ -116,6 +121,10 @@ define([
 
       var elActiveFilter = $('.filters-container .active');
       projectFilterResultsView.load(elActiveFilter.attr('data-id'));
+    }
+
+    function onInstagramFeedLoaded() {
+      instagramFeedView.render();
     }
 
     function onProjectFilterResultsLoaded() {

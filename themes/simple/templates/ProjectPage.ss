@@ -9,6 +9,7 @@
 <body>
 <script>
 var APP = 'DefApp';
+var INSTAGRAM_POSTS = '{$InstagramPosts}';
 </script>
 
 <div id="top" class="project-view">

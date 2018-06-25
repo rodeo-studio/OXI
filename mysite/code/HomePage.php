@@ -7,7 +7,8 @@ class HomePage extends Page {
     'SocialPhoneReal' => 'Text',
     'SocialEmail' => 'Text',
     'SocialMap' => 'Text',
-    'SocialInstagram' => 'Text'
+    'SocialInstagram' => 'Text',
+    'InstagramPosts' => 'Text'
   );
 
   private static $has_many = array(
@@ -41,6 +42,7 @@ class HomePage extends Page {
       $config
     );
     $fields->addFieldToTab('Root.NewsElements', $newsElementField); 
+    $fields->addFieldToTab('Root.NewsElements', new TextField('InstagramPosts', 'Number of Instagram posts'));
 
     return $fields;
   }

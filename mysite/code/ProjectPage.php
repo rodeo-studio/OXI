@@ -14,7 +14,8 @@ class ProjectPage extends Page {
     'TagParks' => 'Boolean',
     'TagGardens' => 'Boolean',
     'TagEducation' => 'Boolean',
-    'TagSport' => 'Boolean'
+    'TagSport' => 'Boolean',
+    'InstagramPosts' => 'Text'
   );
 
   private static $has_many = array(
@@ -41,6 +42,7 @@ class ProjectPage extends Page {
       $config
     );
     $fields->addFieldToTab('Root.NewsElements', $newsElementField); 
+    $fields->addFieldToTab('Root.NewsElements', new TextField('InstagramPosts', 'Number of Instagram posts'));
 
     $uploadField = new UploadField($name = 'HeroImage', $title = 'Feature Image (optional)');
     $uploadField->setCanUpload(false);
